@@ -5,25 +5,21 @@
     <title>Document</title>
 </head>
 <body>
-<?php 
-    
-$name = 'Edwin';
-$number = 100;
-$Number_List = 100.5;
-//$num-ber= 400;
-//$0number = 500;
-$NUMBER = 100;
-$NUMBeR = 100;
-echo $name . " " . $NUMBeR;
 
-$name = "<h1> HELLO</h1>";
+<?php
+    $name = 'Edwin';
+    $number = 100;
+    $Number_List = 100.5;
+    //$num-ber= 400;
+    //$0number = 500;
+    $NUMBER = 100;
+    $NUMBeR = 100;
+    echo $name . " " . $NUMBeR;
 
-echo $name;
+    $name = "<h1> HELLO</h1>";
 
-    
+    echo $name;
 ?>
-
-
 
 </body>
 </html>
