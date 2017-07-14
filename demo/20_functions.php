@@ -6,40 +6,24 @@
 </head>
 <body>
 
-<?php 
+    <?php
+    function init(){
+        say_Something();
+        echo "<br>";
+        calculate();
+    }
 
-function init(){
+    function calculate(){
+        echo 456 + 345;
+    }
 
+    function say_Something(){
+        echo "Hello Student, do you like the class? yes? okay great";
+    }
 
-say_Something();
-echo "<br>";
-calculate();  
+    init();
 
-}
-
-
-
-
-function calculate(){
-
-    echo 456 + 345;
-
-}
-
-
-function say_Something(){
-
-   echo "Hello Student, do you like the class? yes? okay great";
-
-}
-
-  init();  
-    
-    
-    
-?>
-
-
+    ?>
 
 </body>
 </html>
