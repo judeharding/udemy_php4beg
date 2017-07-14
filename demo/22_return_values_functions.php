@@ -6,34 +6,24 @@
 </head>
 <body>
 
-<?php 
-    
-function addNumbers($number1, $number2){
-$sum = $number1 + $number2;
- 
-return $sum;
-    
-    
-} 
+    <?php
+        function addNumbers($number1, $number2){
+            $sum = $number1 + $number2;
+            return $sum;
+        }
 
-$result = addNumbers(34,64);
+        $result = addNumbers(34,64);
+        echo $result;
+        echo "<br>";
 
-echo $result;
+        $result = addNumbers(100, $result);
+        echo $result;
+        echo "<br>";
 
-echo "<br>";
-    
-$result = addNumbers(100, $result);
+        $result = addNumbers(10000, $result);
+        echo $result;
 
-echo $result;
-
-echo "<br>";
-    
-$result = addNumbers(10000, $result);
-
-
-echo $result;
-    
-?>
+    ?>
 
 
 </body>
