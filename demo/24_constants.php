@@ -5,27 +5,19 @@
     <title>Document</title>
 </head>
 <body>
-   
-<?php 
-$number = 10;
-$number = 1000;
 
-$number = "Edwin";
-echo $number . "<br>";
+    <?php
+        // when defining a constant, use the keyword define
+        $number = 10;
+        $number = 1000;
 
-define("NAME", 1000);
+        $number = "Edwin";
+        echo $number . "<br>";
 
-echo NAME;
+        define("NAME", 1000);
+        echo NAME;
 
+    ?>
 
-
-    
-    
-    
-?>
-   
- 
-   
-    
 </body>
 </html>
