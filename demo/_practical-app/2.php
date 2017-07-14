@@ -6,13 +6,13 @@
 		<aside class="col-xs-4">
 
 	<?php Navigation();?>
-			
-			
+
+
 		</aside><!--SIDEBAR-->
 
 
 		<article class="main-content col-xs-8">
-		
+
 
 
 		<?php
@@ -21,22 +21,25 @@
 
 		  Step 2: Add the two variables and display the sum with echo:
 
-
 		  Step3: Make 2 Arrays with the same values, one regular and the other associative
 
 		  Step4: Make a constant and set it to the value of PHP. and use an echo to print it out
 
+		 */
 
-			
+		 $number1 = 10;
+		 $number2 = 20;
+		 echo $number1 + $number2 . "<br>";
+		 echo "<br>\n";
+		 $z = array($number1, $number2);
+		 echo $z[1] . "<br>";
+		 echo "<br>\n";
+		 $x = array("first num" => 10, "second num" => 20);
+		 echo $x['first num'] . "<br>";
+		 print_r($x) ."<br>";
 
-			 */
-
-		
-
-
+// step 4 not in the answer
 		?>
-
-	
 
 		</article><!--MAIN CONTENT-->
 

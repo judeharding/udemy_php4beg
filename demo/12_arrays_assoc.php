@@ -6,25 +6,19 @@
 </head>
 <body>
 
-<?php 
+<?php
+    $number = array('juanita', 'maria', 'jose');
 
-$number = array('juanita', 'maria', 'jose');
+    print_r($number);
+    echo $number[0] . "<br>";
+    echo "<br>";
 
-//print_r($number);
+    // Associative Array Below
 
-echo $number[0] . "<br>";
-echo "<br>";  
+    $names = array("first_name" => 'Edwin', "Last_Name" => 'Diaz' );
 
-
-// Associative Array Below
-
-$names = array("first_name" => 'Edwin', "Last_Name" => 'Diaz' );
-
-//print_r($names);
-
-echo $names['first_name'] . " " . $names['Last_Name'];
-    
-    
+    print_r($names) . "<br>";
+    echo $names['first_name'] . " " . $names['Last_Name'] . "<br>";
 ?>
 
 </body>
