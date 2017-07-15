@@ -6,25 +6,18 @@
 </head>
 <body>
 
-<?php 
+    <?php
+        $list = [343,34,323,23,54,232,453];
 
-$list = [343,34,323,23,54,232,453];
+        echo max($list); // largest number
+        echo "<br>";
+        echo min($list); // smallest number
+        echo "<br>";
+        sort($list); // sorts smallest to largest
+        print_r($list); // prints KEYS AND VALUES
 
-echo max($list);
-
-echo "<br>";
-    
-echo min($list);
-
-
-echo "<br>";
-
-sort($list);
-    
-print_r($list);
-
-
-?>
+        // http://php.net/manual/en/ref.array.php
+    ?>
 
 </body>
 </html>

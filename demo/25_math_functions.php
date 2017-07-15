@@ -5,32 +5,26 @@
     <title>Document</title>
 </head>
 <body>
-<?php
+    <?php
+    echo pow(2,7); // POWER
+    echo "<br>";
 
+    echo rand(1, 1000); // RANDOM NUMBER
+    echo "<br>";
 
-echo pow(2,7);
+    echo sqrt(100); // SQUARE ROOT
+    echo "<br>";
 
-echo "<br>";
+    echo ceil(4.6); // ROUND UP
+    echo "<br>";
 
-echo rand(1, 1000);
+    echo floor(4.6); // ROUND DOWN
+    echo "<br>";
 
-echo "<br>";
+    echo round(4.5);  // ROUNDS A FLOAT
 
-echo sqrt(100);
-
-echo "<br>";
-
-echo ceil(4.6);
-
-echo "<br>";
-
-echo floor(4.6);
-
-echo "<br>";
-
-echo round(4.5);
-
-?>
+// for ALL math functions - http://php.net/manual/en/ref.math.php
+    ?>
 
 
 
