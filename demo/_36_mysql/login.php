@@ -3,8 +3,20 @@
         // echo "got it";
         $username = $_POST['username'];
         $password = $_POST['password'];
-        echo $username;
-        echo $password;
+// checking for data in both fields
+        if ($username && $password) {
+            echo $username;
+            echo $password;
+        } else {
+            echo "this can't be blank";
+        }
+// connecting to Database
+    $connection = mysqli_connect('localhost', 'root', 'root', 'login_app');
+        if ($connection) {
+            echo "we are connected";
+        } else {
+                die("Connection failed");
+        }
     }
 ?>
 <!DOCTYPE html>
