@@ -1,12 +1,4 @@
 <?php
-    if(isset($_POST['submit'])){
-        // echo "got it";
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-// checking for data in both fields
-        if ($username && $password) {
-            // echo $username;
-            // echo $password;
             // connecting to Database
             $connection = mysqli_connect('localhost', 'root', 'root', 'login_app');
             if ($connection) {
@@ -15,17 +7,13 @@
                 die("Connection failed");
             }
             // inserting into database
-            $query = "INSERT INTO users(username, password) VALUES ('$username', '$password' )";
+            $query = "SELECT * FROM users";
             // establishing the connection for the data entered
             $result = mysqli_query($connection, $query);
             // testing to see if the result is actually generated
             if (!$result) {
                 die('QUERY FAILED' . mysqli_error);
             }
-        } else {
-            echo "this can't be blank";
-        }
-    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,19 +27,15 @@
 <body>
     <div class="container">
         <div class="col-sm-6">
-            <form class="" action="login_create.php" method="post">
-                <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" name="username" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" name="password"class="form-control">
-                </div>
-                <div class="">
-                    <input class="btn btn-primary" type="submit" name="submit" value="SUBMIT">
-                </div>
-            </form>
+            <?php
+                while ($row = mysqli_fetch_assoc($result)) {
+            ?>
+            <pre>
+                <?php print_r($row); ?>
+            </pre>
+            <?php
+                }
+            ?>
         </div>
     </div>
 </body>
