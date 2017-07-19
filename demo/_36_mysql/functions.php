@@ -3,10 +3,8 @@ include "db.php";
 ?>
 
 <?php
-    echo "top of functions page works";
     // global $connection;
     function showAllData(){
-        echo "top of function works";
         global $connection;
 // inserting into database
         $query = "SELECT * FROM users";
@@ -22,5 +20,33 @@ include "db.php";
             echo "<option value='$id'>$id</option>";
         }
     }
-echo "bottom of page works";
+
+
+    function updateTable(){
+        global $connection;
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $id = $_POST['id'];
+
+        $query = "UPDATE users SET username = '$username', password  = '$password' WHERE id = $id";
+        $result = mysqli_query($connection, $query);
+        if (!$result) {
+            die('Query failed' .mysqli_error($connection));
+        }
+    }
+
+
+    function deleteRows(){
+        global $connection;
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $id = $_POST['id'];
+
+        $query = "DELETE FROM users WHERE id = $id";
+        $result = mysqli_query($connection, $query);
+        if (!$result) {
+            die('Query failed' .mysqli_error($connection));
+        }
+    }
+
 ?>

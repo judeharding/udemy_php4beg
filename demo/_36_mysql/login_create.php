@@ -8,12 +8,14 @@
             // echo $username;
             // echo $password;
             // connecting to Database
+
             $connection = mysqli_connect('localhost', 'root', 'root', 'login_app');
             if ($connection) {
                 echo "we are connected";
             } else {
                 die("Connection failed");
             }
+
             // inserting into database
             $query = "INSERT INTO users(username, password) VALUES ('$username', '$password' )";
             // establishing the connection for the data entered
