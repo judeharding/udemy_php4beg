@@ -38,6 +38,9 @@ this takes place on ALL fields BEFORE the INSERT INTO / VALUES query. -->
             $username = $_POST['username'];
             $password = $_POST['password'];
             $id = $_POST['id'];
+            $username = mysqli_real_escape_string($connection, $username);
+            $password = mysqli_real_escape_string($connection, $password);
+
 
             $query = "UPDATE users SET username = '$username', password  = '$password' WHERE id = $id";
             $result = mysqli_query($connection, $query);
@@ -73,6 +76,8 @@ this takes place on ALL fields BEFORE the INSERT INTO / VALUES query. -->
             // echo "got it";
             $username = $_POST['username'];
             $password = $_POST['password'];
+            $username = mysqli_real_escape_string($connection, $username);
+            $password = mysqli_real_escape_string($connection, $password);
     // checking for data in both fields
             if ($username && $password) {
                 // echo $username;
