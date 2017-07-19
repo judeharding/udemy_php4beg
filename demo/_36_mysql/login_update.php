@@ -1,5 +1,6 @@
-<?php include "db.php";
-
+<?php
+include "db.php";
+include "functions.php";
             // inserting into database
             $query = "SELECT * FROM users";
             // establishing the connection for the data entered
