@@ -99,6 +99,15 @@
     </body>
     </html>
 
+<!-- sql injections - entering  )' DROP Table ' ";    will delete a table from your db.  
+and what about names like O'Mally?  you need to escape the '
+to prevent  sql injections
+    ex.
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $username = $mysqli_real_escape_string($connection, $username);
+    $password = $mysqli_real_escape_string($connection, $password);
+this takes place on ALL fields BEFORE the INSERT INTO / VALUES query. -->
 
 
 </article><!--MAIN CONTENT-->
