@@ -1,6 +1,26 @@
-<?php include "db.php";?>
-
 <?php
+include "db.php";
+?>
+// ----------
+<?php
+    function showAllData(){
+        while ($row = mysqli_fetch_assoc($result)) {
+            $id = $row['id'];
+            echo "<option value='$id'>$id</option>";
+        }
+        // inserting into database
+        $query = "SELECT * FROM users";
+        // establishing the connection for the data entered
+        $result = mysqli_query($connection, $query);
+        // testing to see if the result is actually generated
+        if (!$result) {
+        die('QUERY FAILED' . mysqli_error);
+        }
+    }
+
+?>
+// ----------
+
     function createRows() {
         if(isset($_POST['submit'])) {
             global $connection;
@@ -45,19 +65,19 @@
 
 // ----------
 
-    function showAllData() {
-        global $connection;
-        $query = "SELECT * FROM users";
-        $result = mysqli_query($connection, $query);
-
-        if(!$result) {
-            die('Query FAILED' . mysqli_error());
-        }
-        while($row = mysqli_fetch_assoc($result)) {
-            $id = $row['id'];
-            echo "<option value='$id'>$id</option>";
-        }
-    }
+    // function showAllData() {
+    //     global $connection;
+    //     $query = "SELECT * FROM users";
+    //     $result = mysqli_query($connection, $query);
+    //
+    //     if(!$result) {
+    //         die('Query FAILED' . mysqli_error());
+    //     }
+    //     while($row = mysqli_fetch_assoc($result)) {
+    //         $id = $row['id'];
+    //         echo "<option value='$id'>$id</option>";
+    //     }
+    // }
 
 // ----------
 
