@@ -1,9 +1,6 @@
-<?php 
-
+<?php
 echo $_POST['name'];
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,16 +9,9 @@ echo $_POST['name'];
     <title>Document</title>
 </head>
 <body>
-
-<form action="the_post.php" method="post">
-   
-   <input type="tex" name="name">
-   
-   <input type="submit">
-    
-    
-</form>
-
-
+    <form action="58_the_post.php" method="post">
+        <input type="text" name="name">
+        <input type="submit">
+    </form>
 </body>
 </html>
