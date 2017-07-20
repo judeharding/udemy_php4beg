@@ -12,8 +12,12 @@ to prevent  sql injections
     $password = $mysqli_real_escape_string($connection, $password);
 this takes place on ALL fields BEFORE the INSERT INTO / VALUES query. -->
 
+
+<!-- password encryption -->
+
+
+
 <?php
-    // global $connection;
     function showAllData(){
         global $connection;
 // inserting into database
@@ -76,8 +80,17 @@ this takes place on ALL fields BEFORE the INSERT INTO / VALUES query. -->
             // echo "got it";
             $username = $_POST['username'];
             $password = $_POST['password'];
+    // escaping characters for names like O'Mally (and preventing sql injections)
             $username = mysqli_real_escape_string($connection, $username);
             $password = mysqli_real_escape_string($connection, $password);
+    // password encryption
+            $hashFormat = "$2y$10"; //crypt blowfish
+            $salt = "iusesomecrazystrings22";// must be at least 22 characters
+    // both of the variables above needed for the crypt function
+            $hashF_and_salt = $hashFormat . $salt;
+            $password =  crypt($password,$hashF_and_salt);
+            echo $password;
+
     // checking for data in both fields
             if ($username && $password) {
                 // echo $username;
@@ -86,7 +99,7 @@ this takes place on ALL fields BEFORE the INSERT INTO / VALUES query. -->
 
                 $connection = mysqli_connect('localhost', 'root', 'root', 'login_app');
                 if ($connection) {
-                    echo "we are connected";
+                    // echo "we are connected";
                 } else {
                     die("Connection failed");
                 }
@@ -103,7 +116,7 @@ this takes place on ALL fields BEFORE the INSERT INTO / VALUES query. -->
                 echo "Record Created";
             }
         } else {
-            echo "this can't be blank";
+            // echo "this can't be blank";
         }
     }
 
