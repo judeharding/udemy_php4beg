@@ -77,19 +77,18 @@ this takes place on ALL fields BEFORE the INSERT INTO / VALUES query. -->
     function createRows(){
         if(isset($_POST['submit'])){
             global $connection;
-            // echo "got it";
+    // echo "got it";
             $username = $_POST['username'];
             $password = $_POST['password'];
     // escaping characters for names like O'Mally (and preventing sql injections)
             $username = mysqli_real_escape_string($connection, $username);
             $password = mysqli_real_escape_string($connection, $password);
     // password encryption
-            $hashFormat = "$2y$10"; //crypt blowfish
+            $hashFormat = "$2y$10$"; //crypt blowfish
             $salt = "iusesomecrazystrings22";// must be at least 22 characters
-    // both of the variables above needed for the crypt function
             $hashF_and_salt = $hashFormat . $salt;
-            $password =  crypt($password,$hashF_and_salt);
-            echo $password;
+            $password = crypt($password,$hashF_and_salt);
+
 
     // checking for data in both fields
             if ($username && $password) {
