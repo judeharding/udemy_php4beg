@@ -14,12 +14,12 @@ setcookie($name,$value,$expiration);  //prebuilt funct w/ 3prams - defined above
 </head>
 <body>
     <?php
-    // if(isset($_COOKIE["SomeName"])) {
-    //     $someOne = $_COOKIE["SomeName"];
-    //     echo $someOne;
-    // } else {
-    //     $someOne = "";
-    // }
+    if(isset($_COOKIE["SomeName"])) {
+        $someOne = $_COOKIE["SomeName"];
+        echo $someOne;
+    } else {
+        $someOne = "";
+    }
     ?>
 </body>
 </html>

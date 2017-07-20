@@ -1,7 +1,6 @@
-<?php session_start();
-
-$_SESSION['greeting'] = "Hello Student this is awesome";
-
+<?php
+    session_start(); // starts a session on a users browser
+        $_SESSION['greeting'] = "Hello Student this is awesome";
 ?>
 
 <!DOCTYPE html>
