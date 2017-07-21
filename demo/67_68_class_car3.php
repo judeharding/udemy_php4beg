@@ -24,5 +24,4 @@
 
     $truck->CreateDoors();
         echo "a truck has " .$truck->doors ." doors " . "<br>";
-
 ?>

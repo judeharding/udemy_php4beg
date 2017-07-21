@@ -27,7 +27,7 @@
             echo $this->engine;
         }
     }
-
+ 
     echo $bmw->showProperty();
     echo $semi->showProperty();
     echo $bmw->wheels . " Public Wheels Outside all the classes";

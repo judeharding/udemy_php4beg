@@ -14,5 +14,4 @@ $bmw = new Car();
 
 Car::MoveWheels();  //2 :: allows you to access a static property in a class instead of arrow
 //echo Car::$wheels;
-
 ?>
